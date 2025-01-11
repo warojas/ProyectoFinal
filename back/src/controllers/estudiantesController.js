@@ -3,7 +3,6 @@ const estudianteService = require('../services/estudianteService');
 
 const router = express.Router();
 
-
 router.get('/', async (req, res) => {
     try {
         const estudiantes = await estudianteService.getAllEstudiantes();
@@ -12,7 +11,6 @@ router.get('/', async (req, res) => {
         res.status(500).json({ message: 'Error al obtener estudiantes', error: error.message });
     }
 });
-
 
 router.get('/:cod_alumno', async (req, res) => {
     try {
@@ -27,7 +25,6 @@ router.get('/:cod_alumno', async (req, res) => {
     }
 });
 
-
 router.post('/', async (req, res) => {
     try {
         const newEstudiante = await estudianteService.createEstudiante(req.body);
@@ -36,7 +33,6 @@ router.post('/', async (req, res) => {
         res.status(500).json({ message: 'Error al crear el estudiante', error: error.message });
     }
 });
-
 
 router.put('/:id', async (req, res) => {
     try {
@@ -50,7 +46,6 @@ router.put('/:id', async (req, res) => {
         res.status(500).json({ message: 'Error al actualizar el estudiante', error: error.message });
     }
 });
-
 
 router.delete('/:id', async (req, res) => {
     try {
