@@ -11,7 +11,7 @@ app.use(helmet());
 console.log(__dirname); 
 console.log(require.resolve('./controllers/estudiantesController'));
 
-// Rutas
+
 app.use('/api/estudiantes', estudiantesController);
 
 const port = process.env.PORT || 3000;
