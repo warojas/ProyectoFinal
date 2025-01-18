@@ -1,1 +1,36 @@
 <p>docentes works!</p>
+<h1>Docentes</h1>
+<div class="card">
+    <div class="card-head">LISTAR ALUMNOS</div>
+    <div class="card-body">
+        <!-- <a routerLink=".components\litar-alumno"></a> -->
+        <table class="table table-success table-striped">
+            <thead>
+              <tr>
+                <th scope="col col-1">Id</th>
+                <th scope="col col-1">Especialidad</th>
+                <th scope="col col-3">Codigo</th>
+                <th scope="col col-3">Nombres</th>
+                <th scope="col col-3">Apellido Paterno</th>
+                <th scope="col col-3">Apellido Materno</th>
+                <th scope="col col-3">DNI</th>
+                <th scope="col col-3">Carrera</th>
+                <th scope="col col-1">Clave</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let alumno of alumnos">
+                <th scope="row">{{alumno.id}}</th>
+                <td>{{alumno.cod_especialidad}}</td>
+                <td>{{alumno.cod_alumno}}</td>
+                <td>{{alumno.txt_nombres}}</td>
+                <td>{{alumno.txt_apellido_paterno}}</td>
+                <td>{{alumno.txt_apellido_materno}}</td>
+                <td>{{alumno.cod_documento}}</td> 
+                <td>{{alumno.txt_carrera}}</td>
+                <td>{{alumno.cod_clave}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
