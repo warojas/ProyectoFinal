@@ -1,0 +1,35 @@
+<h1>Alumnos</h1>
+<div class="card">
+    <div class="card-head">LISTAR ALUMNOS</div>
+    <div class="card-body">
+        <!-- <a routerLink=".components\litar-alumno"></a> -->
+        <table class="table table-success table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Especialidad</th>
+                <th scope="col">Carrera</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">DNI</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellido Paterno</th>
+                <th scope="col">Apellido Materno</th>
+                <th scope="col">Clave</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let alumno of alumnos">
+                <th scope="row">{{alumno.id}}</th>
+                <td>{{alumno.cod_especialidad}}</td>
+                <td>{{alumno.txt_carrera}}</td>
+                <td>{{alumno.cod_alumno}}</td>
+                <td>{{alumno.cod_documento}}</td> 
+                <td>{{alumno.txt_nombres}}</td>
+                <td>{{alumno.txt_apellido_paterno}}</td>
+                <td>{{alumno.txt_apellido_materno}}</td>
+                <td>{{alumno.cod_clave}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

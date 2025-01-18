@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LitarAlumnoComponent } from './components/litar-alumno/litar-alumno.component';
@@ -13,6 +15,8 @@ import { CoupensComponent } from './coupens/coupens.component';
 import { PagesComponent } from './pages/pages.component';
 import { MediaComponent } from './media/media.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AlumnosComponent } from './alumnos/alumnos.component';
+import { DocentesComponent } from './docentes/docentes.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +30,15 @@ import { SettingsComponent } from './settings/settings.component';
     CoupensComponent,
     PagesComponent,
     MediaComponent,
-    SettingsComponent
+    SettingsComponent,
+    AlumnosComponent,
+    DocentesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
